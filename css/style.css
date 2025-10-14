@@ -32,22 +32,24 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
 }
 
 header .logo img {
-  height: 40px;
+  height: 80px;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 header nav a {
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -73,19 +75,19 @@ header nav a:hover {
 }
 
 .hero-text h1 {
-  font-size: 42px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .hero-text p {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 30px;
 }
 
 .btn-primary {
   background-color: white;
   color: var(--cor-primaria);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
   padding: 15px 30px;
@@ -105,4 +107,37 @@ header nav a:hover {
 
 .hero-image img {
   max-width: 100%;
+}
+
+@media (max-width: 760px) {
+  .hero-section {
+    padding: 20px 0;
+  }
+  
+  .hero-section .container {
+    flex-direction: column-reverse;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .hero-text h1 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
 }
