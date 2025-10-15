@@ -39,23 +39,43 @@ header .logo img {
   height: 80px;
 }
 
-header nav ul {
+.menu-nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-header nav a {
+.menu-nav a {
   text-decoration: none;
   color: var(--white);
   font-size: 1.2rem;
   font-weight: bold;
+  position: relative;
+  display: inline-block;
   transition: color 0.3s ease;
+  -webbit-box-reflect: below 1px linear-gradient(transparent, rgba(255,255,255,0.3));
 }
 
-header nav a:hover {
+.menu-nav a:hover {
   color: #dddddd;
+}
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+  justify-content:space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 20;
+}
+.menu-mobile span{
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
 }
 
 .hero-section {
@@ -175,8 +195,31 @@ header nav a:hover {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
 
+  .menu-mobile{
+    display: flex;
+  }
+  .menu-nav{
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(35,35,35,0.1);
+    padding-top: 20px;
+    align-items: center;
+    transition: right 0.3s ease;
+  }
+  .menu-nav ul{
+    flex-direction: column;
+    gap: 25px;
+  }
+  .menu-nav.active{
+    right: 0;
+  }
   header .logo img {
     height: 60px;
   }
@@ -237,6 +280,27 @@ header nav a:hover {
   }
 
 }
+footer{
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+  text-align: center;
+  margin-top: 25px;
+  padding: 25px 15px;
+  font-size:14px;
+}
+.footer-container{
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.footer-container strong{
+  color: var(--white);
+}
+footer #disclaimer{
+  font-size: 13px;
+  color: var(--white);
+  margin-top: 10px;
+}
 
 @media (max-width: 510px) {
   .questions-cards{
@@ -259,6 +323,7 @@ header nav a:hover {
 }
 
 @media (max-width: 450px) {
+  /*
   header .container {
     flex-wrap: wrap;
   }
@@ -269,7 +334,7 @@ header nav a:hover {
 
   header nav ul {
     justify-content: space-evenly;
-  }
+  } */
 
   .hero-text h1 {
     font-size: 1.5rem;
@@ -285,4 +350,16 @@ header nav a:hover {
     font-size: 1.5rem;
     padding: 20px 40px;
   }
+}
+
+/* Animação menu-mobile */
+
+.menu-mobile.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px,5px);
+}
+.menu-mobile.active span:nth-child(2){
+  opacity: 0;
+}
+.menu-mobile.active span:nth-child(3){
+  transform: rotate(-45deg) translate(5px,-5px);
 }
