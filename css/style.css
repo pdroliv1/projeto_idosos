@@ -1,7 +1,7 @@
 :root {
+  --white: #FFFFFF;
   --cor-primaria: #2D9A9A;
-  --cor-texto: #333333;
-  --cor-fundo: #FFFFFF;
+  --cor-texto: #18283E;
 }
 
 * {
@@ -13,7 +13,7 @@
 body {
   font-family: Inter, sans-serif;
   color: var(--cor-texto);
-  background-color: var(--cor-fundo);
+  background-color: var(--white);
 }
 
 .container {
@@ -25,29 +25,31 @@ body {
 header {
   width: 100%;
   padding: 20px 0;
-  background-color: var(--cor-primaria);
+  background: linear-gradient(to bottom, #2EAFAC, #59C0BD);
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
 }
 
 header .logo img {
-  height: 40px;
+  height: 80px;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 header nav a {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
+  color: var(--white);
+  font-size: 1.2rem;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -57,14 +59,14 @@ header nav a:hover {
 }
 
 .hero-section {
-  background-color: var(--cor-primaria);
+  background: linear-gradient(to bottom, #59C0BD, #FFFFFF 66%);
   color: white;
   padding: 60px 0;
 }
 
 .hero-section .container {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 40px;
 }
 
@@ -73,25 +75,28 @@ header nav a:hover {
 }
 
 .hero-text h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin: 40px 0;
+  color: var(--cor-texto);
+  text-transform: uppercase;
 }
 
 .hero-text p {
-  font-size: 18px;
+  font-size: 1.5rem;
   margin-bottom: 30px;
+  color: var(--cor-texto);
 }
 
 .btn-primary {
-  background-color: white;
-  color: var(--cor-primaria);
-  font-size: 16px;
+  font-size: 2.2rem;
   font-weight: bold;
-  text-transform: uppercase;
-  padding: 15px 30px;
+  color: var(--white);
+  background-color: var(--cor-primaria);
+  padding: 30px 60px;
   border: none;
-  border-radius: 8px;
+  border-radius: 60px;
   cursor: pointer;
+  text-transform: uppercase;
   transition: transform 0.3s ease;
 }
 
@@ -105,4 +110,179 @@ header nav a:hover {
 
 .hero-image img {
   max-width: 100%;
+}
+
+/* Quesitos */
+
+.questions {
+  color: var(--cor-texto);
+  margin-top: 120px;
+}
+
+.questions-text h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.questions-text p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.questions-cards {
+  display: flex;
+  margin-top: 60px;
+}
+
+.questions-cards{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: inline-block;
+  border: 2px solid var(--cor-primaria);
+  border-radius: 25px;
+  padding: 12px;
+  box-shadow: 12px 12px 0px 0px var(--cor-primaria);
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.card p {
+  max-width: 26ch;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .btn-primary {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 760px) {
+
+  header .logo img {
+    height: 60px;
+  }
+
+  .hero-section {
+    padding: 20px 0;
+  }
+  
+  .hero-section .container {
+    flex-direction: column-reverse;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    padding: 12px;
+    box-shadow: 8px 8px 0px 0px var(--cor-primaria);
+    margin-top: 20px;
+  }
+
+  .card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  .card-img img {
+    max-height: 50px;
+  }
+
+  .questions-cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+    max-width: 26ch;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 510px) {
+  .questions-cards{
+    gap: 10px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 18px;
+    max-width: 10ch;
+  }
+
+  .card p {
+    font-size: 14px;
+    max-width: 18ch;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  header .container {
+    flex-wrap: wrap;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav ul {
+    justify-content: space-evenly;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .btn-primary {
+    font-size: 1.5rem;
+    padding: 20px 40px;
+  }
 }
