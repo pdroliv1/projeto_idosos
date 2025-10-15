@@ -110,6 +110,11 @@ header nav a:hover {
 }
 
 @media (max-width: 760px) {
+
+  header .logo img {
+    height: 60px;
+  }
+
   .hero-section {
     padding: 20px 0;
   }
@@ -131,6 +136,18 @@ header nav a:hover {
 }
 
 @media (max-width: 450px) {
+  header .container {
+    flex-wrap: wrap;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav ul {
+    justify-content: space-evenly;
+  }
+
   .hero-text h1 {
     font-size: 1.75rem;
     margin-bottom: 16px;
