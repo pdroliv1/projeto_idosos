@@ -84,27 +84,45 @@ header .logo img {
   padding: 60px 0;
 }
 
-.hero-section .container {
+.about-section {
+  background: var(--cor-primaria);
+  color: white;
+  padding: 60px 0;
+}
+
+.hero-section .container, .about-section .container {
   display: flex;
   align-items: start;
   gap: 40px;
 }
 
-.hero-text {
+.about-section .container {
+  align-items: center;
+}
+
+.hero-text, .about-text {
   flex: 1;
 }
 
-.hero-text h1 {
+.hero-text h1, .about-text h1 {
   font-size: 2.2rem;
   margin: 40px 0;
   color: var(--cor-texto);
   text-transform: uppercase;
 }
 
-.hero-text p {
+.about-text h1 {
+  color: var(--white);
+}
+
+.hero-text p, .about-text p {
   font-size: 1.5rem;
   margin-bottom: 30px;
   color: var(--cor-texto);
+}
+
+.about-text p {
+  color: var(--white);
 }
 
 .btn-primary {
@@ -124,28 +142,40 @@ header .logo img {
   transform: scale(1.05);
 }
 
-.hero-image {
+.hero-image, .about-image {
   flex: 1;
 }
 
-.hero-image img {
+.hero-image img, .about-image img {
   max-width: 100%;
 }
 
 /* Quesitos */
 
-.questions {
+.questions, .counter-box {
   color: var(--cor-texto);
-  margin-top: 120px;
+  margin: 120px 0;
 }
 
-.questions-text h2 {
+.counter {
+  display: flex;
+  margin: 50px 0;
+  justify-content: center;
+}
+
+.counter a {
+  background-color: var(--cor-primaria);
+  border-radius: 30px;
+  padding: 30px 60px;
+}
+
+.questions-text h2, .counter-text h2 {
   font-size: 2.2rem;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.questions-text p {
+.questions-text p, .counter-text p {
   text-align: center;
   font-size: 1.6rem;
 }
@@ -224,7 +254,7 @@ header .logo img {
     height: 60px;
   }
 
-  .hero-section {
+  .hero-section, .about-section {
     padding: 20px 0;
   }
   
@@ -232,13 +262,17 @@ header .logo img {
     flex-direction: column-reverse;
   }
 
-  .hero-text h1 {
+  .about-section .container {
+    flex-direction: column;
+  }
+
+  .hero-text h1, .about-text h1 {
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 20px;
   }
 
-  .hero-text p {
+  .hero-text p, .about-text p {
     font-size: 1.3rem;
     margin-bottom: 30px;
   }
@@ -323,25 +357,13 @@ footer #disclaimer{
 }
 
 @media (max-width: 450px) {
-  /*
-  header .container {
-    flex-wrap: wrap;
-  }
 
-  header nav {
-    width: 100%;
-  }
-
-  header nav ul {
-    justify-content: space-evenly;
-  } */
-
-  .hero-text h1 {
+  .hero-text h1, .about-text h1 {
     font-size: 1.5rem;
     margin-bottom: 16px;
   }
 
-  .hero-text p {
+  .hero-text p, .about-text p {
     font-size: 1rem;
     margin-bottom: 30px;
   }
