@@ -261,6 +261,9 @@ header .logo img {
   .hero-section .container {
     flex-direction: column-reverse;
   }
+  .hero-text {
+    text-align: center;
+  }
 
   .about-section .container {
     flex-direction: column;
@@ -275,6 +278,10 @@ header .logo img {
   .hero-text p, .about-text p {
     font-size: 1.3rem;
     margin-bottom: 30px;
+  }
+  .btn-primary{
+    display: block;
+    margin: 0 auto;
   }
 
   .card {
@@ -318,7 +325,7 @@ footer{
   background-color: var(--cor-primaria);
   color: var(--cor-texto);
   text-align: center;
-  margin-top: 25px;
+  margin-top: 100px;
   padding: 25px 15px;
   font-size:14px;
 }
@@ -338,7 +345,8 @@ footer #disclaimer{
 
 @media (max-width: 510px) {
   .questions-cards{
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
   }
 
   .card h3 {
