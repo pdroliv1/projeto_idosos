@@ -163,7 +163,7 @@ header .logo img {
   justify-content: center;
 }
 
-.counter a {
+.counter span {
   background-color: var(--cor-primaria);
   border-radius: 30px;
   padding: 30px 60px;
